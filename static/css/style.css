@@ -137,7 +137,10 @@ nav.primary-nav a.current::after{
 @media (max-width: 880px){
   nav.primary-nav{
     display:none;
-    position:fixed; inset:78px 0 0 0; z-index:100;
+    position:fixed;
+    top:78px; left:0; right:0; bottom:0;
+    width:100%;
+    z-index:200;
     background-color:var(--teal-deep);
     flex-direction:column; align-items:flex-start; gap:0;
     padding:10px 28px 30px;
