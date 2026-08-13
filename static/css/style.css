@@ -136,13 +136,15 @@ nav.primary-nav a.current::after{
 
 @media (max-width: 880px){
   nav.primary-nav{
-    position:fixed; inset:78px 0 0 0; background:var(--teal-deep);
+    display:none;
+    position:fixed; inset:78px 0 0 0; z-index:100;
+    background-color:var(--teal-deep);
     flex-direction:column; align-items:flex-start; gap:0;
-    padding:10px 28px 30px; transform:translateY(-8px);
-    opacity:0; pointer-events:none; transition:opacity .2s ease, transform .2s ease;
+    padding:10px 28px 30px;
     border-top:1px solid rgba(201,162,75,.2);
+    overflow-y:auto;
   }
-  nav.primary-nav.open{ opacity:1; pointer-events:auto; transform:translateY(0); }
+  nav.primary-nav.open{ display:flex; }
   nav.primary-nav a{ width:100%; padding:14px 0; border-bottom:1px solid rgba(201,162,75,.12); }
   .nav-cta{ margin-top:16px; display:inline-block; }
   .nav-toggle{ display:block; }
